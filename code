@@ -1,0 +1,29 @@
+# main.py
+results={}
+average={}
+
+student=int(input("Enter the number of students: "))
+
+test=int(input("Enter the number of tests each student took: "))
+
+for i in range(1,5):
+  name=input("Enter student "+str(i)+"'s name: ")
+  results[name]=[]
+
+
+for j in range(test):
+  for name in results:
+    score=int(input("Enter "+name+"'s score on test "+str(j+1)+": "))
+    results[name].append(score)
+    
+
+    
+print(results)
+  
+for i in results:
+  z=0
+  for test in results[i]:
+    z+=test
+  average[i]=z/len(results[i])
+
+print(average)
